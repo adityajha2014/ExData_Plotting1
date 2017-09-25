@@ -14,7 +14,7 @@ datetime <- strptime(paste(data1$Date, data1$Time, sep=" "), "%d/%m/%Y %H:%M:%S"
 png("Plot4.png")
 par(mfrow=c(2,2))
 plot(datetime, as.numeric(data1$Global_active_power), type = "l", ylab = "Global Active Power(kilowatts)", xlab = "")
-plot(datetime, as.numeric(Voltage), xlab = "datetime", ylab = "Voltage")
+plot(datetime, as.numeric(Voltage), type="l",xlab = "datetime", ylab = "Voltage")
 plot(datetime, Sub_metering_1, type="l", ylab="Energy Submetering", xlab="")
 points(datetime, Sub_metering_2, type = "l", col="red")
 points(datetime, Sub_metering_3, type = "l", col="blue")
